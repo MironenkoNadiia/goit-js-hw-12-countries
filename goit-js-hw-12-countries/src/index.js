@@ -30,7 +30,7 @@ function onSearchInput(e) {
         );
       }
 
-      if (countries.length > 10) {
+      if (countries.length > 50) {
         error({
           text: 'Too many matches found.Please enter a more specific query!',
         });
