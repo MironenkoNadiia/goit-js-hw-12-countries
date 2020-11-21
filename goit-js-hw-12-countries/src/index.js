@@ -38,8 +38,8 @@ function onSearchInput(e) {
       }
 
       countries.length >= 2
-        ? renderCountriesList(countries)
-        : renderCountryCard(countries);
+        ? refs.output.innerHTML = countryList(countries)
+        : refs.output.innerHTML = countryCard(countries);
     })
     .catch(err => {
       error({
@@ -48,10 +48,10 @@ function onSearchInput(e) {
     });
 }
 
-function renderCountriesList(countries) {
-  refs.output.innerHTML = countryList(countries);
-}
-function renderCountryCard(countries) {
-  refs.output.innerHTML = countryCard(countries);
-}
+// function renderCountriesList(countries) {
+//   refs.output.innerHTML = countryList(countries);
+// }
+// function renderCountryCard(countries) {
+//   refs.output.innerHTML = countryCard(countries);
+// }
 
