@@ -38,8 +38,8 @@ function onSearchInput(e) {
       }
 
       countries.length >= 2
-        ? refs.output.innerHTML = countryList(countries)
-        : refs.output.innerHTML = countryCard(countries);
+        ? renderCountryCard( countryList(countries) )
+        : renderCountryCard( countryCard(countries) );
     })
     .catch(err => {
       error({
@@ -48,10 +48,9 @@ function onSearchInput(e) {
     });
 }
 
-// function renderCountriesList(countries) {
-//   refs.output.innerHTML = countryList(countries);
-// }
-// function renderCountryCard(countries) {
-//   refs.output.innerHTML = countryCard(countries);
-// }
+function renderCountryCard(payload) {
+refs.output.innerHTML = payload;
+}
+
+
 
